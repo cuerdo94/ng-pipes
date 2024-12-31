@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-
-
+import { Avatar } from 'primeng/avatar';
+import { AvatarGroup } from 'primeng/avatargroup';
 
 @Component({
   selector: 'shared-menu',
@@ -15,18 +15,27 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Options',
+        label: 'Home',
+        icon: 'pi pi-home',
+        badge: '9',
         items: [
           {
-            label: 'Refresh',
-            icon: 'pi pi-refresh'
+            label: 'Home',
+            icon: 'pi pi-home',
+            routerLink: '/home',
           },
           {
-            label: 'Export',
-            icon: 'pi pi-upload'
-          }
-        ]
-      }
+            label: 'About',
+            icon: 'pi pi-info-circle',
+            routerLink: '/about',
+          },
+          {
+            label: 'Contact',
+            icon: 'pi pi-user',
+            routerLink: '/contact',
+          },
+        ],
+      },
     ];
   }
 }
